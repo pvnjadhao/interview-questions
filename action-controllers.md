@@ -14,3 +14,12 @@ class HomeController < ApplicationController
 end
 ```
 
+### Mention what is the role of Rails Controller? 
+
+The Rails controller is the logical center of the application. It facilitates the interaction between the users, views, and the model. It also performs other activities like 
+
+* It is capable of routing external requests to internal actions. It handles a URL extremely well 
+
+* It regulates helper modules, which extend the capabilities of the view templates without bulking of their code 
+
+* It regulates sessions; that gives users the impression of an ongoing interaction with our applications 
