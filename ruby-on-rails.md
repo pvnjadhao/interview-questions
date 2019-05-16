@@ -11,6 +11,50 @@ Vertical scaling means adding more RAM, upgrading the server’s processor, etc.
 Horizontal scaling means converting the single server architecture of your app to a three-tier architecture, where the server and load balancer (Nginx), app instances, and database instances are located on different servers. In such a way, we allocate equal and smaller loads among machines.
 ***
 
+### Server-side caching and Client-side caching 
+
+Caching means storing the result of complex computation in some storage and later returning them without re-computing everything. We can achieve caching in rails using five ways. 
+
+**Model or Low-level caching**
+
+The idea behind the low-level caching is we can catch the result of complex query and return without re-running the same query over and over again. Rails automatically uses this type of caching but only for the same queries performed in the same controller action. After action finishes its job the cached data is no longer available. So, to get advantage to this caching method we need long-term storage. Rails core has necessary methods to read and write cached data. There are three methods to do that.  
+
+```ruby
+Rails.cache.write 'some_key', 5 # => true 
+
+Rails.cache.read 'some_key' # => 5 
+
+Rails.cache.fetch('some_other_key') { 50 + 50 } #=> 100 (saved to cache) 
+
+Rails.cache.fetch('some_other_key') { 50 + 50 } #=> 100 (fetched from cache)
+```
+
+The read and write methods are simple to use. The fetch method complex it tries to find value with the key if it doesn’t it will write the data and return that data as a result. 
+
+In this method if the record is changed or modified, we need to flush the cache manually.  
+
+```ruby
+Rails.cache.delete 'all_employees' 
+```
+ 
+
+**Fragment caching**
+
+The fragment caching used to cache only the part of page. It is pretty popular and handy. Using it can be very simple just wrap code of view inside the catch method. 
+
+```irb
+<% cache employee do %> 
+
+<% end %> 
+```
+
+**Action caching**
+
+**Page caching**
+
+**HTTP caching**
+
+***
 
 ### What is an active Record? 
 
