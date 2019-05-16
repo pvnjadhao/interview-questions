@@ -162,15 +162,16 @@ class Book < ApplicationRecord
   # Data manipulation code
 end
 ```
+***
 
 ### What is Observer and Callback in rails?
 
-**Rails Callback**
+**Rails Callback**  
 Callbacks are methods that get called at certain moments of an object’s life cycle. That means that it can be called when an object is created, saved, updated, deleted, validated, or loaded from the database.
 
 A callback is more short lived. And you pass it into a function to be called once. 
-
-**Rails Observers**
+ 
+**Rails Observers**  
 Observer is similer to Callback but it is used when method is not directly related to object lifecycle. The other difference is an observer lives longer and it can be attached/detached at any time. There can be many observers for the same thing and they can have different lifetimes. 
 The best example of Observer is that it could be “send registration confirmation emails” As we can argued that a User model should not include code to send registration confirmation emails so we will create observer for this.
 
