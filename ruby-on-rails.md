@@ -128,6 +128,17 @@ Callbacks are methods that get called at certain moments of an object's life cyc
 * after_save 
 * after_commit/after_rollback 
 ***
+
+### What are filters?
+
+Filters are methods that are run before, after or “around” a controller action. 
+
+Filters are inherited, so if you set a filter on ApplicationController, it will be run on every controller in your application. 
+
+[Read More...](https://railskey.wordpress.com/2011/09/03/rails-filters-before-after-and-around-filters/)
+
+***
+
 ### What is an active Record? 
 
 Rails Active Record is the Object/Relational Mapping (ORM) layer provided by Rails. It follows the standard ORM model, like 
