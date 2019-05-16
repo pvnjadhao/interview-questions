@@ -71,8 +71,36 @@ $ rails generate scaffold Post title: string content:text category_id: integer
 ```
 
 It requires the insertion of the command to, generate the data with their fields. It requires the database to, be migrated.  
+***
 
+### Mention what are the positive aspects of Rails? 
 
+Rails provides many features like 
+
+**Meta-programming:**
+Rails uses code generation but for heavy lifting it relies on meta-programming. Ruby is considered as one of the best programming languages for Meta-programming. 
+
+**Active Record:**
+It saves object to the database through Active Record Framework. The Rails version of Active Record identifies the column in a schema and automatically binds them to your domain objects using metaprogramming. 
+
+**Scaffolding:**
+Rails have an ability to create scaffolding or temporary code automatically 
+
+**Convention over configuration:**
+Rails does not require much configuration like other development framework, if you follow the naming convention carefully. 
+
+**Three environments:**
+Rails comes with three default environment testing, development, and production. So, we can test the application in three different environments while development. 
+
+**Built-in-testing:**
+Rails comes with build-in testing suit which help us to write TDD tests.
+***
+
+### Explain what is ORM (Object-Relationship-Model) in Rails? 
+
+ORM or Object Relationship Mapper it helps to map classes to the table in the database, and objects are directly mapped to the rows in the table. It’s a DSL (Domain Specific Language) designed to work with the database directly from rails application. We don’t need write SQL queries manually on database level. ORM handles it out of the box.
+
+***
 ### What is an active Record? 
 
 Rails Active Record is the Object/Relational Mapping (ORM) layer provided by Rails. It follows the standard ORM model, like 
