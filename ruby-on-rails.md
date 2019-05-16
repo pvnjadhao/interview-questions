@@ -56,6 +56,23 @@ The fragment caching used to cache only the part of page. It is pretty popular a
 
 ***
 
+### What is cucumber? 
+
+Cucumber is a tool used for testing application. It runs automated tests written in a behavior-driven development (BDD) style. I automatically launch the browser and perform actions provided in script like user.
+***
+
+### What is static and dynamic scaffolding? 
+
+Dynamic Scaffolding is used to give the model name that is being used with the function like ```scaffold: model_name```. It automatically generates the entire content and user interface at runtime. It doesn’t require the database to be integrated as it gets created in runtime. It allows the generation of new, edit and deletes methods for the use in application. 
+
+Static Scaffolding requires manual entry in the command. 
+```bash 
+$ rails generate scaffold Post title: string content:text category_id: integer 
+```
+
+It requires the insertion of the command to, generate the data with their fields. It requires the database to, be migrated.  
+
+
 ### What is an active Record? 
 
 Rails Active Record is the Object/Relational Mapping (ORM) layer provided by Rails. It follows the standard ORM model, like 
