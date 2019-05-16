@@ -3,6 +3,13 @@ https://www.railstutorial.org/book/following_users
 
 https://insiders.liveshare.vsengsaas.visualstudio.com/join?5E234E7217020B2DE143F8444563D60A6F26
 
+* belongs_to
+* has_one 
+* has_many 
+* has_many :through 
+* has_one :through 
+* has_and_belongs_to_many 
+
 ***
 
 ### **- has_one**
