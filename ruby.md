@@ -116,8 +116,54 @@ var2 = A.a(2)
 Nil 
 4
 ```
+***
 
+### What is meta programming? 
 
+Metaprogramming is a dynamic nature of programming language. It allows you to define and redefine methods and classes at runtime which are not already exist. Means write a code that write code itself dynamically at runtime. 
+
+Suppose you have a class Car and Car has a property like model, price and top speed. If we want to set these properties from outside class, then we need define getters and setters' methods with this approach the code become larger and larger. Ruby provides built in methods to generate getter and setter methods like ```attr_writer```, ```attr_reader``` and ```attr_accessor``` with the help of these methods we can easily set the properties of class. Here is the concept of metaprogramming comes in. The ```attr_writter```,  ```attr_reader``` and ```attr_accessor``` methods generate getters and setter methods for us dynamically. 
+
+[Read More...](http://rubylearning.com/blog/2010/11/23/dont-know-metaprogramming-in-ruby/)
+***
+
+### What is multithreading in ruby? 
+
+Traditional programs have a single thread to execute the statement of program sequentially, one statement at a time. A multithreaded program has more than one thread of execution. Within each thread, statement executed sequentially but the thread executed in parallel. A thread is like a lightweight sub-process to divide the one large process in small units.  
+
+In Ruby we have a Thread class to write multithreaded programs. Ruby threads are lightweight. To write the multithread program we need to create the instance of Thread class and associate the block with it. 
+
+**What is multithreading?**
+
+The process of executing multiple threads simultaneously. 
+
+**What is a Thread?**
+
+A lightweight sub-process which handles the smallest unit of processing. 
+
+**Advantages of Multithreading:**
+
+* Threads are independent so it won’t block users. 
+
+* Many operations can be performed so it saves more time. 
+
+* It shares the same memory
+***
+
+### Mention what the difference is between false and nil in Ruby?
+
+In Ruby False indicates a Boolean datatype, while Nil is not a data type, it has an object id 4. 
+***
+
+### Mention what is the naming convention in ruby? 
+
+* Class names are CamelCase.
+* Methods and variables are snake_case. 
+
+### Explain what is "yield" in ruby? 
+
+A Ruby method that receives a code block executes it by calling it with the “Yield”. 
+***
 
 
 
