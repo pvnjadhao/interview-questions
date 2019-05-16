@@ -1,3 +1,17 @@
+### How to scale rails application? 
+
+Application scalability is how many user requests application handles per minute. There are two types of scalabilities. Vertical Scalability and Horizontal Scalability. 
+
+**Vertical Scalability with Ruby on Rails**
+
+Vertical scaling means adding more RAM, upgrading the server’s processor, etc. You can give your servers computer more power. 
+
+**Horizontal Scalability with Ruby on Rails**
+
+Horizontal scaling means converting the single server architecture of your app to a three-tier architecture, where the server and load balancer (Nginx), app instances, and database instances are located on different servers. In such a way, we allocate equal and smaller loads among machines.
+***
+
+
 ### What is an active Record? 
 
 Rails Active Record is the Object/Relational Mapping (ORM) layer provided by Rails. It follows the standard ORM model, like 
