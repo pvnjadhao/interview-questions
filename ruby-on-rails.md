@@ -99,7 +99,34 @@ Rails comes with build-in testing suit which help us to write TDD tests.
 ### Explain what is ORM (Object-Relationship-Model) in Rails? 
 
 ORM or Object Relationship Mapper it helps to map classes to the table in the database, and objects are directly mapped to the rows in the table. It’s a DSL (Domain Specific Language) designed to work with the database directly from rails application. We don’t need write SQL queries manually on database level. ORM handles it out of the box.
+***
 
+### List out what can Rails Migration do? 
+
+Rails Migration can do following things 
+
+* Create table
+* Drop table
+* Rename table 
+* Add column
+* Rename column 
+* Change column
+* Remove column and so on 
+***
+
+### What is callbacks in rails? 
+
+Callbacks are methods that get called at certain moments of an object's life cycle. With callbacks it is possible to write code that will run whenever an Active Record object is created, saved, updated, deleted, validated, or loaded from the database. 
+
+* before_validation 
+* after_validation 
+* before_save 
+* around_save 
+* before_create 
+* around_create 
+* after_create 
+* after_save 
+* after_commit/after_rollback 
 ***
 ### What is an active Record? 
 
