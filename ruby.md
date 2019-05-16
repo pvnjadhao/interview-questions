@@ -165,5 +165,17 @@ In Ruby False indicates a Boolean datatype, while Nil is not a data type, it has
 A Ruby method that receives a code block executes it by calling it with the “Yield”. 
 ***
 
+# Mention what is the difference between String and Symbol? 
 
+They both act in the same way only they differ in their behaviors which are opposite to each other. The difference lies in the object_id, memory and process tune when they are used together. Symbol belongs to the category of immutable objects whereas Strings are considered as mutable objects. 
+***
+
+### Explain how Symbol is different from variables? 
+
+Symbol is different from variables in following aspects 
+
+* It is more like a string than variable 
+* In Ruby a string is mutable but a Symbol is immutable 
+* Only one copy of the symbol requires to be created
+* Symbols are often used as the corresponding to enums in Ruby 
 
