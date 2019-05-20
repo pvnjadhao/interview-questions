@@ -179,3 +179,15 @@ Symbol is different from variables in following aspects
 * Only one copy of the symbol requires to be created
 * Symbols are often used as the corresponding to enums in Ruby 
 
+### What are the differences between class variables and instance variables?
+
+They both are member variables, meaning that both are associated with a class.
+
+**Instance variables:**
+
+These variables belong to the instance of a class, thus an object. And every instance of that class (object) has it's own copy of that variable. Changes made to the variable don't reflect in other instances of that class.
+
+**Class variables:**
+
+These are also known as static member variables and there's only one copy of that variable that is shared with all instances of that class. If changes are made to that variable, all other instances will see the effect of the changes.
+
