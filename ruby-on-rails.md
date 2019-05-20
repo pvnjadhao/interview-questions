@@ -175,3 +175,10 @@ A callback is more short lived. And you pass it into a function to be called onc
 Observer is similer to Callback but it is used when method is not directly related to object lifecycle. The other difference is an observer lives longer and it can be attached/detached at any time. There can be many observers for the same thing and they can have different lifetimes. 
 The best example of Observer is that it could be “send registration confirmation emails” As we can argued that a User model should not include code to send registration confirmation emails so we will create observer for this.
 
+### Difference between after_create, after_save and after_commit in rails callbacks  
+
+In the case of after_create, this will always be before the call to save (or create) returns.
+
+Rails wraps every save inside a transaction and the before/after create callbacks run inside that transaction (a consequence of this is that if an exception is raised in an after_create the save will be rolled back). With after_commit, your code doesn't run until after the outermost transaction was committed. This could be the transaction rails created or one created by you (for example if you wanted to make several changes inside a single transaction). Originally posted here
+
+That also means, that if after_commit raises an exception, then the transaction won't be rolled back.
