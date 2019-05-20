@@ -174,6 +174,7 @@ A callback is more short lived. And you pass it into a function to be called onc
 **Rails Observers**  
 Observer is similer to Callback but it is used when method is not directly related to object lifecycle. The other difference is an observer lives longer and it can be attached/detached at any time. There can be many observers for the same thing and they can have different lifetimes. 
 The best example of Observer is that it could be “send registration confirmation emails” As we can argued that a User model should not include code to send registration confirmation emails so we will create observer for this.
+***
 
 ### Difference between after_create, after_save and after_commit in rails callbacks  
 
@@ -182,3 +183,49 @@ In the case of after_create, this will always be before the call to save (or cre
 Rails wraps every save inside a transaction and the before/after create callbacks run inside that transaction (a consequence of this is that if an exception is raised in an after_create the save will be rolled back). With after_commit, your code doesn't run until after the outermost transaction was committed. This could be the transaction rails created or one created by you (for example if you wanted to make several changes inside a single transaction). Originally posted here
 
 That also means, that if after_commit raises an exception, then the transaction won't be rolled back.
+***
+
+### What is difference between Collection and Member in rails routing  
+
+Defining a member block inside a resource creates a route that can act on an individual member of that resource-based route:
+
+```ruby
+resources :posts do
+  member do
+    get 'preview'
+  end
+end
+```
+
+This generates the following member route:
+
+```ruby
+get '/posts/:id/preview', to: 'posts#preview'
+# preview_post_path
+```
+
+Collection routes allow for creating routes that can act on a collection of resource objects:
+```ruby
+resources :posts do
+  collection do
+    get 'search'
+  end
+end
+```
+
+This generates the following collection route:
+
+```ruby
+get '/posts/search', to: 'posts#search'
+# search_posts_path
+```
+
+An alternate syntax:
+
+```ruby
+resources :posts do
+  get 'preview', on: :member
+  get 'search',  on: :collection
+end
+```
+***
